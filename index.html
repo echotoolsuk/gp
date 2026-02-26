@@ -1,801 +1,875 @@
-<!-- GP Guidance (BNSSG) - Fully Inline HTML for Embedding -->
-<!-- No external CSS or JavaScript required -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoTools.uk</title>
+    <style>
+        :root {
+        --bg-primary: #ffffff;
+        --bg-secondary: #ffffff;
+        --bg-tertiary: #d6d6d6;
+        --bg-h1: #ffffff;
+        --bg-h2: #f9f9f9;
+        --bg-h3: #ededed;
+        --bg-block: #ededed; 
+        --text-primary: #1c1c1c;
+        --text-secondary: #1f1f1f;
+        --accent-primary: #101010;
+        --border-color: #cccccc;
+        }
 
-<div style="text-align: center; margin-bottom: 20px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
-    <h1 style="margin: 10px 0 0 0;">GP Guidance (BNSSG)</h1>
-</div>
+        html, body {
+            height: 100%;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+        }
 
-<div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
-    Quick-reference guidance for summary statements on transthoracic echo reports for adult patients.
+        main {
+            height: calc(100% - 100px);
+            background-color: var(--bg-primary);
+        }
+
+        body {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 5px;
+        }
+
+        .heading {
+            padding: 12px 10px;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: background-color 0.1s;
+            user-select: none;
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+
+        .heading:hover {
+            color: var(--accent-hover);
+        }
+
+        .heading.h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-primary);
+            background-color: var(--bg-h1);
+        }
+
+        .heading.h2 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 0;
+            color: var(--text-primary);
+            background-color: var(--bg-h2);
+        }
+
+        .heading.h3 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-left: 10px;
+            color: var(--text-secondary);
+            background-color: var(--bg-h3);
+        }
+
+        .content {
+            display: none;
+            padding: 2px 15px 4px 15px;
+            margin: 0 0 0 0;
+            background-color: var(--bg-secondary);
+            color: var(--text-secondary);
+        }
+
+        .content.h1-content {
+            margin-left: 20px;
+        }
+
+        .content.h2-content {
+            margin-left: 0;
+        }
+
+        .content.h3-content {
+            margin-left: 20px;
+        }
+
+        .arrow {
+            display: inline-block;
+            margin-right: 10px;
+            transition: transform 0.1s;
+            color: var(--accent-primary);
+        }
+
+        .heading.active .arrow {
+            transform: rotate(90deg);
+        }
+
+        .block {
+            padding: 6px; 
+            display: block;
+            background-color: var(--bg-block);
+            border-radius: 4px;  /* Optional: adds rounded corners */
+            margin:6px;
+        }
+
+        .indent {
+            margin-left:0.5rem;
+        }
+        
+        /* Home button */
+        .home-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 8px 12px;
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .home-button:hover {
+            background-color: var(--bg-tertiary);
+            text-decoration: none;
+        }
+
+        .home-icon {
+            width: 18px;
+            height: 18px;
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center; margin-bottom: 20px;">
+        <a href="https://echotools.uk" class="home-button">
+            <svg class="home-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" fill="currentColor"/>
+            </svg>
+        </a>
+        <h1 style="margin: 10px 0 0 0;">GP Guidance (BNSSG)</h1>
+    </div>
+    <div class="block" style="text-align:center">
+        Quick-reference guidance for summary statements on transthoracic echo reports for adult patients.
     <br><br>
-    The objective is to help primary care physicians find the correct guidance quickly and without additional steps.
+        The objective is to help primary care physicians find the correct guidance quickly and without additional steps.
     <br><br>
-    <span style="color: grey;">
-        <i>For GPs working in Bristol, North Somerset and South Gloucestershire ICB</i>
-    </span>
-</div>
-
-<!-- ==================== LV FUNCTION ==================== -->
-<details style="margin: 10px 0; border: 1px solid #ccc; border-radius: 8px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
-    <summary style="padding: 12px 10px; cursor: pointer; font-size: 24px; font-weight: bold; background-color: #fff;">
-        Impaired Left Ventricular Systolic or Diastolic Function
-    </summary>
-    <div style="padding: 2px 15px 4px 15px; margin-left: 20px;">
-        For full up-to-date guidance, please see the following two resources:
-        <br>
-        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
+        <span style="color:grey">
+            <i>For GPs working in Bristol, North Somerset and South Gloucestershire ICB</i>
+        </span>
+    </div>
+    <div class="heading h1" onclick="toggle(this)">
+        <span class="arrow">▶</span>Impaired Left Ventricular Systolic or Diastolic Function</div>  
+        <div class="content h1-content">
+            For full up-to-date guidance, please see the following two resources:
+            <br>
+            <div class="block">
             Remedy - Heart Failure page:
-            <a href="https://remedy.bnssg.icb.nhs.uk/adults/cardiology/heart-failure/" target="_blank" style="color: #101010;">Click Here</a>
+            <a href="https://remedy.bnssg.icb.nhs.uk/adults/cardiology/heart-failure/" target="_blank">Click Here</a>
             <br><br>
             BNSSG Primary Care Heart Failure Treatment Guideline:
-            <a href="https://remedy.bnssg.icb.nhs.uk/media/t1kpgp4m/bnssg-hfguideline-2024.pdf" target="_blank" style="color: #101010;">Click Here</a>
+            <a href="https://remedy.bnssg.icb.nhs.uk/media/t1kpgp4m/bnssg-hfguideline-2024.pdf" target="_blank">Click Here</a>
+            </div>
+
+        <div class="heading h2" onclick="toggle(this)">
+            <span class="arrow">▶</span>Suspected Heart Failure
         </div>
 
-        <!-- Suspected Heart Failure -->
-        <details style="margin: 10px 0; border: 1px solid #ccc; border-radius: 8px;">
-            <summary style="padding: 12px 10px; cursor: pointer; font-size: 20px; font-weight: bold; background-color: #f9f9f9;">
-                Suspected Heart Failure
-            </summary>
-            <div style="padding: 2px 15px 4px 15px;">
-
-                <!-- EF <50% -->
-                <details style="margin: 10px 0 10px 10px; border: 1px solid #ccc; border-radius: 8px;">
-                    <summary style="padding: 12px 10px; cursor: pointer; font-size: 16px; font-weight: bold; background-color: #ededed; color: #1f1f1f;">
-                        "...impaired left ventricular systolic function" (EF &lt;50%)
-                    </summary>
-                    <div style="padding: 10px 15px; margin-left: 20px;">
-                        <span style="color: grey;">
+        <div class="content h2-content">
+            <div class="heading h3" onclick="toggle(this)">
+                <span class="arrow">▶</span>"...impaired left ventricular systolic function" (EF &lt;50%)
+            </div>
+                <div class="content h3-content">
+                        <span style="color:grey">
                             <i>Alongside clinical signs of heart failure and elevated NT-proBNP (&gt;400pg/ml) - this suggests:</i>
                         </span>
                         <br><br>
                         <b>Heart Failure with reduced Ejection Fraction (HFrEF)</b>
                         <br>
-                        <span style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
+                        <span class="block">
                             In all cases:
-                            <span style="color: green;">
+                            <span style="color:green">
                                 <br>Optimal medical management
                             </span>
                             <br>
-                            <span style="color: grey;">
+                            <span style="color:grey">
+                                
                                 BNSSG Primary Care Heart Failure Treatment Guideline:
-                                <a href="https://remedy.bnssg.icb.nhs.uk/media/t1kpgp4m/bnssg-hfguideline-2024.pdf" target="_blank" style="color: #101010;">Click Here</a>
+                                <a href="https://remedy.bnssg.icb.nhs.uk/media/t1kpgp4m/bnssg-hfguideline-2024.pdf" target="_blank">Click Here</a>
                                 <br>
                                 <i>(Page 2: "Treatment Algorithm for LV Systolic Dysfunction")</i>
                             </span>
                             <br><br>
-                            <span style="color: orange;">
+                            <span style="color:orange">
                                 +/- Referral to appropriate heart failure service
                             </span>
                             <br>
-                            <span style="color: grey;">
-                                Remedy - Heart Failure page:
-                                <a href="https://remedy.bnssg.icb.nhs.uk/adults/cardiology/heart-failure/" target="_blank" style="color: #101010;">Click Here</a>
+                            <span style="color:grey">
+                                Remedy - Heart Failure page: 
+                                <a href="https://remedy.bnssg.icb.nhs.uk/adults/cardiology/heart-failure/" target="_blank">Click Here</a>
                                 <br>
                                 <i>(scroll down to referral advice based on NT-proBNP level)</i>
                             </span>
                         </span>
                         <br>
-                        <span style="color: grey;">
+                        <span style="color:grey">
                             <i>Technically, cases with EF 41-49% would be classed as Heart Failure with mid-range Ejection Fraction (HFmrEF) - but they are treated the same, so are grouped together here under HFrEF.</i>
                         </span>
-                    </div>
-                </details>
+                </div>
 
-                <!-- EF >50% -->
-                <details style="margin: 10px 0 10px 10px; border: 1px solid #ccc; border-radius: 8px;">
-                    <summary style="padding: 12px 10px; cursor: pointer; font-size: 16px; font-weight: bold; background-color: #ededed; color: #1f1f1f;">
-                        "...impaired left ventricular systolic function" (EF &gt;50%)
-                    </summary>
-                    <div style="padding: 10px 15px; margin-left: 20px;">
-                        <span style="color: grey;">
-                            <i>Alongside clinical signs of heart failure and elevated NT-proBNP (&gt;400pg/ml) - this suggests:</i>
-                        </span>
-                        <br><br>
-                        <b>Heart Failure with preserved Ejection Fraction (HFpEF)</b>
-                        <br>
-                        <span style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            In all cases:
-                            <span style="color: green;">
-                                <br>Optimal medical management
-                            </span>
-                            <br>
-                            <span style="color: grey;">
-                                BNSSG Primary Care Heart Failure Treatment Guideline:
-                                <a href="https://remedy.bnssg.icb.nhs.uk/media/t1kpgp4m/bnssg-hfguideline-2024.pdf" target="_blank" style="color: #101010;">Click Here</a>
-                                <br>
-                                <i>(Page 3: "Treatment Algorithm for Preserved Ejection Fraction")</i>
-                            </span>
-                            <br><br>
-                            <span style="color: orange;">
-                                +/- Referral to appropriate heart failure service
-                            </span>
-                            <br>
-                            <span style="color: grey;">
-                                Remedy - Heart Failure page:
-                                <a href="https://remedy.bnssg.icb.nhs.uk/adults/cardiology/heart-failure/" target="_blank" style="color: #101010;">Click Here</a>
-                                <br>
-                                <i>(scroll down to referral advice based on NT-proBNP level)</i>
-                            </span>
-                        </span>
-                    </div>
-                </details>
-
-                <!-- Impaired diastolic -->
-                <details style="margin: 10px 0 10px 10px; border: 1px solid #ccc; border-radius: 8px;">
-                    <summary style="padding: 12px 10px; cursor: pointer; font-size: 16px; font-weight: bold; background-color: #ededed; color: #1f1f1f;">
-                        "Impaired diastolic function" (EF &gt;55%)
-                    </summary>
-                    <div style="padding: 10px 15px; margin-left: 20px;">
-                        <span style="color: grey;">
-                            <i>Alongside clinical signs of heart failure and elevated NT-proBNP (&gt;400pg/ml) - this suggests:</i>
-                        </span>
-                        <br><br>
-                        <b>Heart Failure with preserved Ejection Fraction (HFpEF)</b>
-                        <br>
-                        <span style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            In all cases:
-                            <span style="color: green;">
-                                <br>Optimal medical management
-                            </span>
-                            <br>
-                            <span style="color: grey;">
-                                BNSSG Primary Care Heart Failure Treatment Guideline:
-                                <a href="https://remedy.bnssg.icb.nhs.uk/media/t1kpgp4m/bnssg-hfguideline-2024.pdf" target="_blank" style="color: #101010;">Click Here</a>
-                                <br>
-                                <i>(Page 3: "Treatment Algorithm for Preserved Ejection Fraction")</i>
-                            </span>
-                            <br><br>
-                            <span style="color: orange;">
-                                +/- Referral to appropriate heart failure service
-                            </span>
-                            <br>
-                            <span style="color: grey;">
-                                Remedy - Heart Failure page:
-                                <a href="https://remedy.bnssg.icb.nhs.uk/adults/cardiology/heart-failure/" target="_blank" style="color: #101010;">Click Here</a>
-                                <br>
-                                <i>(scroll down to referral advice based on NT-proBNP level)</i>
-                            </span>
-                        </span>
-                    </div>
-                </details>
-
-                <!-- Normal function -->
-                <details style="margin: 10px 0 10px 10px; border: 1px solid #ccc; border-radius: 8px;">
-                    <summary style="padding: 12px 10px; cursor: pointer; font-size: 16px; font-weight: bold; background-color: #ededed; color: #1f1f1f;">
-                        Normal systolic and diastolic function
-                    </summary>
-                    <div style="padding: 10px 15px; margin-left: 20px;">
-                        This suggests the cause of symptoms and elevated BNP is not due to Heart Failure – other diagnoses should be considered.
-                    </div>
-                </details>
-
+            <div class="heading h3" onclick="toggle(this)">
+                <span class="arrow">▶</span>"...impaired left ventricular systolic function" (EF &gt;50%)
             </div>
-        </details>
+                <div class="content h3-content">
+                    <span style="color:grey">
+                        <i>Alongside clinical signs of heart failure and elevated NT-proBNP (&gt;400pg/ml) - this suggests:</i>
+                    </span>
+                    <br><br>
+                    <b>Heart Failure with preserved Ejection Fraction (HFpEF)</b>
+                    <br>
+                    <span class="block">
+                        In all cases:
+                        <span style="color:green">
+                            <br>Optimal medical management
+                        </span>
+                        <br>
+                        <span style="color:grey">
 
-        <!-- Known Heart Failure -->
-        <details style="margin: 10px 0; border: 1px solid #ccc; border-radius: 8px;">
-            <summary style="padding: 12px 10px; cursor: pointer; font-size: 20px; font-weight: bold; background-color: #f9f9f9;">
-                Known Heart Failure
-            </summary>
-            <div style="padding: 2px 15px 4px 15px;">
-                Routine follow-up imaging is not recommended for known heart failure.
+                            BNSSG Primary Care Heart Failure Treatment Guideline:
+                            <a href="https://remedy.bnssg.icb.nhs.uk/media/t1kpgp4m/bnssg-hfguideline-2024.pdf" target="_blank">Click Here</a>
+                            <br>
+                            <i>(Page 3: "Treatment Algorithm for Preserved Ejection Fraction")</i>
+                        </span>
+                        <br><br>
+                        <span style="color:orange">
+                            +/- Referral to appropriate heart failure service
+                        </span>
+                        <br>
+                        <span style="color:grey">
+                            Remedy - Heart Failure page: 
+                            <a href="https://remedy.bnssg.icb.nhs.uk/adults/cardiology/heart-failure/" target="_blank">Click Here</a>
+                            <br>
+                            <i>(scroll down to referral advice based on NT-proBNP level)</i>
+                        </span>
+                    </span>
+                </div>
+
+            <div class="heading h3" onclick="toggle(this)">
+                <span class="arrow">▶</span>"Impaired diastolic function" (EF &gt;55%)
+            </div>
+                <div class="content h3-content">
+                    <span style="color:grey">
+                        <i>Alongside clinical signs of heart failure and elevated NT-proBNP (&gt;400pg/ml) - this suggests:</i>
+                    </span>
+                    <br><br>
+                    <b>Heart Failure with preserved Ejection Fraction (HFpEF)</b>
+                    <br>
+                    <span class="block">
+                        In all cases:
+                        <span style="color:green">
+                            <br>Optimal medical management
+                        </span>
+                        <br>
+                        <span style="color:grey">
+
+                            BNSSG Primary Care Heart Failure Treatment Guideline:
+                            <a href="https://remedy.bnssg.icb.nhs.uk/media/t1kpgp4m/bnssg-hfguideline-2024.pdf" target="_blank">Click Here</a>
+                            <br>
+                            <i>(Page 3: "Treatment Algorithm for Preserved Ejection Fraction")</i>
+                        </span>
+                        <br><br>
+                        <span style="color:orange">
+                            +/- Referral to appropriate heart failure service
+                        </span>
+                        <br>
+                        <span style="color:grey">
+                            Remedy - Heart Failure page: 
+                            <a href="https://remedy.bnssg.icb.nhs.uk/adults/cardiology/heart-failure/" target="_blank">Click Here</a>
+                            <br>
+                            <i>(scroll down to referral advice based on NT-proBNP level)</i>
+                        </span>
+                    </span>
+                </div>
+
+            <div class="heading h3" onclick="toggle(this)">
+                <span class="arrow">▶</span>Normal systolic and diastolic function
+            </div>
+                <div class="content h3-content">
+                    This suggests the cause of symptoms and elevated BNP is not due to Heart Failure – other diagnoses should be considered. 
+                </div>                      
+        </div>
+
+        <div class="heading h2" onclick="toggle(this)">
+            <span class="arrow">▶</span>Known Heart Failure
+        </div>
+            <div class="content h2-content">
+                Routine follow-up imaging is not recommended for known heart failure. 
                 <br><br>
                 <b>Clinically stable with incidental finding of change in Ejection Fraction:</b>
-                <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                    <span style="color: grey;">
+                <div class="block">
+                    <span style="color:grey">
                         No action required unless change in clinical status
                     </span>
                 </div>
                 <br>
                 <b>Significant change in clinical status despite optimal medical therapy:</b>
-                <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                    <span style="color: orange;">
+                <div class="block">
+                    <span style="color:orange">
                         Referral to the appropriate heart failure service.
                     </span>
                     <br>
-                    <span style="color: grey;">
-                        Remedy - Heart Failure page:
-                        <a href="https://remedy.bnssg.icb.nhs.uk/adults/cardiology/heart-failure/" target="_blank" style="color: #101010;">Click Here</a>
+                    <span style="color:grey">
+                        Remedy - Heart Failure page: 
+                        <a href="https://remedy.bnssg.icb.nhs.uk/adults/cardiology/heart-failure/" target="_blank">Click Here</a>
                         <br>
-                        <i>(scroll down to "Patients with known heart failure")</i>
+                        <i>(scroll down to “Patients with known heart failure”)</i>
                     </span>
                 </div>
             </div>
-        </details>
 
-        <!-- Incidental New Finding -->
-        <details style="margin: 10px 0; border: 1px solid #ccc; border-radius: 8px;">
-            <summary style="padding: 12px 10px; cursor: pointer; font-size: 20px; font-weight: bold; background-color: #f9f9f9;">
-                Incidental New Finding
-            </summary>
-            <div style="padding: 2px 15px 4px 15px;">
-                Where echo has been performed for another reason and there is unexpected finding of left ventricular systolic and/or diastolic dysfunction.
+        <div class="heading h2" onclick="toggle(this)">
+            <span class="arrow">▶</span>Incidental New Finding
+        </div>
+            <div class="content h2-content">
+                Where echo has been performed for another reason and there is unexpected finding of left ventricular systolic and/or diastolic dysfunction. 
                 <br>
-                <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
+                <div class="block">
                     In most cases:
-                    <span style="color: orange;">
+                    <span style="color:orange">
                         <br>
                         Routine cardiology referral.
                     </span>
                     <br><br>
                     If severely impaired left ventricular systolic function (EF &lt;35%):
-                    <span style="color: red;">
+                    <span style="color:red">
                         <br>
                         Urgent cardiology referral.
                     </span>
-                    <span style="color: grey;">
-                        <br><br>
-                        <i>For unclear cases, cardiology advice and guidance would likely be appropriate</i>
-                    </span>
-                </div>
-            </div>
-        </details>
-
-    </div>
-</details>
-
-<!-- ==================== PULMONARY HYPERTENSION ==================== -->
-<details style="margin: 10px 0; border: 1px solid #ccc; border-radius: 8px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
-    <summary style="padding: 12px 10px; cursor: pointer; font-size: 24px; font-weight: bold; background-color: #fff;">
-        Probability of Pulmonary Hypertension
-    </summary>
-    <div style="padding: 2px 15px 4px 15px; margin-left: 20px;">
-        For full up-to-date guidance, please see the following resource:
-        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-            Remedy - Pulmonary Hypertension page:
-            <a href="https://remedy.bnssg.icb.nhs.uk/adults/cardiology/pulmonary-hypertension/" target="_blank" style="color: #101010;">Click Here</a>
-        </div>
-        <br>
-        Brief explainer:
-        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-            <i>In the most basic terms, elevated pulmonary artery pressures come about as a result of:
-            <br>• Restriction of blood flow within the lungs (varied pathologies), or
-            <br>• Restriction of blood flow out of the lungs (left-sided heart disease)
-            <br><br>
-            Estimates of the probability of pulmonary hypertension by transthoracic echo correlate poorly to gold standard measures of pulmonary pressures, so should always be considered alongside the clinical picture.
-            </i>
-        </div>
-
-        <!-- Low Probability -->
-        <details style="margin: 10px 0; border: 1px solid #ccc; border-radius: 8px;">
-            <summary style="padding: 12px 10px; cursor: pointer; font-size: 20px; font-weight: bold; background-color: #f9f9f9;">
-                Low Probability of Pulmonary Hypertension
-            </summary>
-            <div style="padding: 2px 15px 4px 15px;">
-                <span style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                    In all cases:
-                    <span style="color: grey;">
-                        <br>No action required.
-                    </span>
+                <span style="color:grey">
+                    <br><br>
+                    <i>For unclear cases, cardiology advice and guidance would likely be appropriate</i>
                 </span>
-            </div>
-        </details>
-
-        <!-- Intermediate Probability -->
-        <details style="margin: 10px 0; border: 1px solid #ccc; border-radius: 8px;">
-            <summary style="padding: 12px 10px; cursor: pointer; font-size: 20px; font-weight: bold; background-color: #f9f9f9;">
-                Intermediate Probability of Pulmonary Hypertension
-            </summary>
-            <div style="padding: 2px 15px 4px 15px;">
-                <b>Known left-sided heart pathology:</b>
-                <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                    In all cases:
-                    <span style="color: green;">
-                        Optimal treatment of heart disease.
-                    </span>
-                    <span style="color: grey;">
-                        <br>
-                        <i>No further action required</i>
-                    </span>
-                </div>
-
-                <br>
-                <b>Known pulmonary pathology:</b>
-                <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                    In all cases:
-                    <span style="color: green;">
-                        Optimal treatment of pulmonary disease.
-                    </span>
-                    <span style="color: grey;">
-                        <br>
-                        <i>No further action required</i>
-                    </span>
-                </div>
-
-                <br>
-                <b>Unexplained dyspnoea with normal left heart:</b>
-                <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                    <span style="color: orange;">
-                        Further investigation +/- referral to appropriate specialty
-                    </span>
-                    <span style="color: grey;">
-                        <br>
-                        <i>
-                            Please refer to Remedy - Pulmonary Hypertension page:
-                            <a href="https://remedy.bnssg.icb.nhs.uk/adults/cardiology/pulmonary-hypertension/" target="_blank" style="color: #101010;">Click Here</a>
-                        </i>
-                    </span>
                 </div>
             </div>
-        </details>
-
-        <!-- High Probability -->
-        <details style="margin: 10px 0; border: 1px solid #ccc; border-radius: 8px;">
-            <summary style="padding: 12px 10px; cursor: pointer; font-size: 20px; font-weight: bold; background-color: #f9f9f9;">
-                High Probability of Pulmonary Hypertension
-            </summary>
-            <div style="padding: 2px 15px 4px 15px;">
-                <b>Known left-sided heart pathology:</b>
-                <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                    In all cases:
-                    <span style="color: green;">
-                        Optimal treatment of heart disease.
-                    </span>
-                    <span style="color: grey;">
-                        <br>
-                        <i>No further action required</i>
-                    </span>
-                </div>
-
-                <br>
-                <b>Known pulmonary pathology:</b>
-                <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                    In all cases:
-                    <span style="color: green;">
-                        Optimal treatment of pulmonary disease.
-                    </span>
-                    <span style="color: grey;">
-                        <br>
-                        <i>No further action required</i>
-                    </span>
-                </div>
-
-                <br>
-                <b>Unexplained dyspnoea with normal left heart:</b>
-                <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                    <span style="color: orange;">
-                        Further investigation +/- referral to appropriate specialty
-                    </span>
-                    <span style="color: grey;">
-                        <br>
-                        <i>
-                            Please refer to Remedy - Pulmonary Hypertension page:
-                            <a href="https://remedy.bnssg.icb.nhs.uk/adults/cardiology/pulmonary-hypertension/" target="_blank" style="color: #101010;">Click Here</a>
-                        </i>
-                    </span>
-                </div>
-            </div>
-        </details>
-
-    </div>
-</details>
-
-<!-- ==================== DILATED AORTA ==================== -->
-<details style="margin: 10px 0; border: 1px solid #ccc; border-radius: 8px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
-    <summary style="padding: 12px 10px; cursor: pointer; font-size: 24px; font-weight: bold; background-color: #fff;">
-        Dilated Aorta
-    </summary>
-    <div style="padding: 2px 15px 4px 15px; margin-left: 20px;">
-        For full up-to-date guidance, please see the following resource:
-        <br>
-        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-            Remedy - Aortopathy page:
-            <a href="https://remedy.bnssg.icb.nhs.uk/adults/cardiology/thoracic-aorta-disease/" target="_blank" style="color: #101010;">Click Here</a>
         </div>
 
-        <!-- New Finding -->
-        <details style="margin: 10px 0; border: 1px solid #ccc; border-radius: 8px;">
-            <summary style="padding: 12px 10px; cursor: pointer; font-size: 20px; font-weight: bold; background-color: #f9f9f9;">
-                New Finding of Dilated Aorta
-            </summary>
-            <div style="padding: 2px 15px 4px 15px;">
+    <div class="heading h1" onclick="toggle(this)">
+        <span class="arrow">▶</span>Probability of Pulmonary Hypertension</div>
+        <div class="content h1-content">
+            For full up-to-date guidance, please see the following resource:
+            <div class="block">
+                Remedy - Pulmonary Hypertension page:
+                <a href="https://remedy.bnssg.icb.nhs.uk/adults/cardiology/pulmonary-hypertension/" target="_blank">Click Here</a>
+            </div>
+            <br>
+            Brief explainer:
+            <div class="block">
+                <i>In the most basic terms, elevated pulmonary artery pressures come about as a result of: 
+                <br>•	Restriction of blood flow within the lungs (varied pathologies), or
+                <br>•	Restriction of blood flow out of the lungs (left-sided heart disease)
+                <br><br>
+                Estimates of the probability of pulmonary hypertension by transthoracic echo correlate poorly to gold standard measures of pulmonary pressures, so should always be considered alongside the clinical picture. 
+                </i>
+            </div>
 
-                <!-- <40mm -->
-                <details style="margin: 10px 0 10px 10px; border: 1px solid #ccc; border-radius: 8px;">
-                    <summary style="padding: 12px 10px; cursor: pointer; font-size: 16px; font-weight: bold; background-color: #ededed; color: #1f1f1f;">
-                        Absolute diameter &lt;40mm (root or proximal ascending aorta)
-                    </summary>
-                    <div style="padding: 10px 15px; margin-left: 20px;">
-                        <b>Asymptomatic patients with any of the following:</b>
+            <div class="heading h2" onclick="toggle(this)">
+                <span class="arrow">▶</span>Low Probability of Pulmonary Hypertension
+            </div>
+            
+            <div class="content h2-content">
+                <p>
+                    <span class="block">
+                        In all cases:
+                        <span style="color:grey">
+                            <br>No action required.
+                        </span>
+                    </span>
+                </p>
+            </div>
+
+        <div class="heading h2" onclick="toggle(this)">
+            <span class="arrow">▶</span>Intermediate Probability of Pulmonary Hypertension
+        </div>
+            <div class="content h2-content">
+                <b>Known left-sided heart pathology:</b>
+                <div class="block">
+                    In all cases:
+                    <span style="color:green">
+                        Optimal treatment of heart disease.
+                    </span>
+                    <span style="color:grey">
+                    <br>
+                        <i>No further action required</i>
+                    </span>
+                </div>
+                
+                <br>
+                <b>Known pulmonary pathology:</b>
+                <div class="block">
+                    In all cases:
+                    <span style="color:green">
+                        Optimal treatment of pulmonary disease.
+                    </span>
+                    <span style="color:grey">
+                    <br>
+                        <i>No further action required</i>
+                    </span>
+                </div>
+                
+                <br>
+                <b>Unexplained dyspnoea with normal left heart:</b>
+                <div class="block">
+                    <span style="color:orange">
+                        Further investiation +/- referral to appropriate specialty
+                    </span>
+                    <span style="color:grey">
+                        <br>
+                        <i>
+                        Please refer to Remedy - Pulmonary Hypertension page: 
+                        <a href="https://remedy.bnssg.icb.nhs.uk/adults/cardiology/pulmonary-hypertension/" target="_blank">Click Here</a>
+                        </i>
+                    </span>
+                </div>
+            </div>
+
+        <div class="heading h2" onclick="toggle(this)">
+            <span class="arrow">▶</span>High Probability of Pulmonary Hypertension
+        </div>
+            <div class="content h2-content">
+                <b>Known left-sided heart pathology:</b>
+                <div class="block">
+                    In all cases:
+                    <span style="color:green">
+                        Optimal treatment of heart disease.
+                    </span>
+                    <span style="color:grey">
+                    <br>
+                        <i>No further action required</i>
+                    </span>
+                </div>
+                
+                <br>
+                <b>Known pulmonary pathology:</b>
+                <div class="block">
+                    In all cases:
+                    <span style="color:green">
+                        Optimal treatment of pulmonary disease.
+                    </span>
+                    <span style="color:grey">
+                    <br>
+                        <i>No further action required</i>
+                    </span>
+                </div>
+                
+                <br>
+                <b>Unexplained dyspnoea with normal left heart:</b>
+                <div class="block">
+                    <span style="color:orange">
+                        Further investiation +/- referral to appropriate specialty
+                    </span>
+                    <span style="color:grey">
+                        <br>
+                        <i>
+                        Please refer to Remedy - Pulmonary Hypertension page: 
+                        <a href="https://remedy.bnssg.icb.nhs.uk/adults/cardiology/pulmonary-hypertension/" target="_blank">Click Here</a>
+                        </i>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    <div class="heading h1" onclick="toggle(this)">
+        <span class="arrow">▶</span>Dilated Aorta</div>
+        <div class="content h1-content">
+            For full up-to-date guidance, please see the following resource:
+            <br>
+            <div class="block">
+                Remedy - Aortopathy page:
+                <a href="https://remedy.bnssg.icb.nhs.uk/adults/cardiology/thoracic-aorta-disease/" target="_blank">Click Here</a>
+            </div>
+            
+            <div class="heading h2" onclick="toggle(this)">
+                <span class="arrow">▶</span>New Finding of Dilated Aorta
+            </div>           
+            <div class="content h2-content">
+
+                <div class="heading h3" onclick="toggle(this)">
+                    <span class="arrow">▶</span>Absolute diameter &lt;40mm (root or proximal ascending aorta)
+                </div>
+                    <div class="content h3-content">
+                        <b>Asymptomatic patients with any of the following: </b>
                         <br>- Family history of aortic or vessel aneurysm/dissection.
                         <br>- Bicuspid aortic valve.
                         <br>- Age &lt;60 with strong suspicion of underlying disease.
                         <br>
-                        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            <span style="color: orange;">
+                        <div class="block">
+                            <span style="color:orange">
                                 Routine valve clinic referral
                             </span>
                             <br>
-                            <span style="color: grey;">
+                            <span style="color:grey">
                                 <i>
                                     (please see guidance on Remedy - Aortopathy page:
-                                    <a href="https://remedy.bnssg.icb.nhs.uk/adults/cardiology/thoracic-aorta-disease/" target="_blank" style="color: #101010;">Click Here</a>)
+                                    <a href="https://remedy.bnssg.icb.nhs.uk/adults/cardiology/thoracic-aorta-disease/" target="_blank">Click Here</a>)
                                 </i>
                             </span>
                         </div>
                         <br>
-                        <b>Asymptomatic patients with none of the above:</b>
-                        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            <span style="color: grey;">
-                                No follow-up required
-                            </span>
-                        </div>
+                        <b>Asymptomatic patients with none of the above: </b>
+                            <div class="block">
+                                <span style="color:grey">
+                                    No follow-up required
+                                </span>
+                            </div>
                     </div>
-                </details>
-
-                <!-- >40mm -->
-                <details style="margin: 10px 0 10px 10px; border: 1px solid #ccc; border-radius: 8px;">
-                    <summary style="padding: 12px 10px; cursor: pointer; font-size: 16px; font-weight: bold; background-color: #ededed; color: #1f1f1f;">
-                        Absolute diameter &gt;40mm (root or proximal ascending aorta)
-                    </summary>
-                    <div style="padding: 10px 15px; margin-left: 20px;">
-                        <b>Asymptomatic patients:</b>
-                        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            In all cases:
-                            <span style="color: orange;">
-                                Routine valve clinic referral
-                            </span>
-                            <br>
-                            <span style="color: grey;">
-                                <i>
-                                    (please see guidance on Remedy - Aortopathy page:
-                                    <a href="https://remedy.bnssg.icb.nhs.uk/adults/cardiology/thoracic-aorta-disease/" target="_blank" style="color: #101010;">Click Here</a>)
-                                </i>
-                            </span>
-                        </div>
+                
+                <div class="heading h3" onclick="toggle(this)">
+                    <span class="arrow">▶</span>Absolute diameter &gt;40mm (root or proximal ascending aorta)
+                </div>
+                <div class="content h3-content">
+                    <b>Asymptomatic patients:</b>
+                    <div class="block">
+                         In all cases:
+                        <span style="color:orange">
+                            Routine valve clinic referral
+                        </span>
                         <br>
-                        <div style="color: grey;">
+                        <span style="color:grey">
                             <i>
-                                Safety netting - advise the patient that if they develop chest pain then they should call 999 and attend their local emergency department immediately.
+                                (please see guidance on Remedy - Aortopathy page:
+                                <a href="https://remedy.bnssg.icb.nhs.uk/adults/cardiology/thoracic-aorta-disease/" target="_blank">Click Here</a>)
                             </i>
-                        </div>
+                        </span>
                     </div>
-                </details>
-
+                    <br>
+                    <div style="color:grey">
+                        <i>
+                            Safety netting - advise the patient that if they develop chest pain then they should call 999 and attend their local emergency department immediately.
+                        </i>
+                    </div>
+                </div>
             </div>
-        </details>
-
-        <!-- Follow-up for Known -->
-        <details style="margin: 10px 0; border: 1px solid #ccc; border-radius: 8px;">
-            <summary style="padding: 12px 10px; cursor: pointer; font-size: 20px; font-weight: bold; background-color: #f9f9f9;">
-                Follow-up for Known Aortopathy
-            </summary>
-            <div style="padding: 2px 15px 4px 15px;">
-                <p>Follow-up for known aortopathy should be cardiologist-led in all cases.</p>
+            
+            <div class="heading h2" onclick="toggle(this)">
+                <span class="arrow">▶</span>Follow-up for Known Aortopathy
+            </div>           
+            <div class="content h2-content">
+                <p>
+                    Follow-up for known aortopathy should be cardiologist-led in all cases. 
+                </p>
             </div>
-        </details>
-
     </div>
-</details>
-
-<!-- ==================== VALVE DISEASE ==================== -->
-<details style="margin: 10px 0; border: 1px solid #ccc; border-radius: 8px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">
-    <summary style="padding: 12px 10px; cursor: pointer; font-size: 24px; font-weight: bold; background-color: #fff;">
-        Valve Disease
-    </summary>
-    <div style="padding: 2px 15px 4px 15px; margin-left: 20px;">
-        The guidance in this section is based primarily on the following resource, albeit with some local policy variations:
-        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
+    
+    <div class="heading h1" onclick="toggle(this)">
+        <span class="arrow">▶</span>Valve Disease
+    </div>
+    <div class="content h1-content">
+        The guidance in this section is based primarily on the following resource, albeit with some local policy variations: 
+        <div class="block">
             2025 ESC/EACTS Guidelines for the Management of Valvular Heart Disease
-            <a href="https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Valvular-Heart-Disease" target="_blank" style="color: #101010;">Click Here</a>
+            <a href="https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Valvular-Heart-Disease" target="_blank">Click Here</a>
         </div>
-
-        <!-- AORTIC VALVE -->
-        <details style="margin: 10px 0; border: 1px solid #ccc; border-radius: 8px;">
-            <summary style="padding: 12px 10px; cursor: pointer; font-size: 20px; font-weight: bold; background-color: #f9f9f9;">
-                Aortic Valve
-            </summary>
-            <div style="padding: 2px 15px 4px 15px;">
-
-                <!-- Sclerotic -->
-                <details style="margin: 10px 0 10px 10px; border: 1px solid #ccc; border-radius: 8px;">
-                    <summary style="padding: 12px 10px; cursor: pointer; font-size: 16px; font-weight: bold; background-color: #ededed; color: #1f1f1f;">
-                        Sclerotic Aortic Valve
-                    </summary>
-                    <div style="padding: 10px 15px; margin-left: 20px;">
-                        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            <span style="color: grey;">
-                                No routine follow-up
-                                <br><br>
-                                <i>This describes an aortic valve with thickened and/or slightly restricted leaflets, but without any significant restriction to blood flow.</i>
-                            </span>
-                        </div>
-                    </div>
-                </details>
-
-                <!-- Aortic Stenosis -->
-                <details style="margin: 10px 0 10px 10px; border: 1px solid #ccc; border-radius: 8px;">
-                    <summary style="padding: 12px 10px; cursor: pointer; font-size: 16px; font-weight: bold; background-color: #ededed; color: #1f1f1f;">
-                        Aortic Stenosis
-                    </summary>
-                    <div style="padding: 10px 15px; margin-left: 20px;">
-                        <span style="color: grey;"><i>If valve intervention would not improve prognosis or quality of life (e.g. terminal illness, significant frailty etc) then referral for specialist care is not indicated.</i></span>
-                        <br><br>
-                        <b>Mild aortic stenosis:</b>
-                        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            Trileaflet valve, non-dilated aorta:
-                            <span style="color: green;">
-                                Repeat echo in 3 years
-                            </span>
-                            <br>
-                            <span style="color: grey;">
-                                <i>No cardiology referral required.</i>
-                            </span>
-                            <br><br>
-                            Trileaflet valve, aorta &gt;40mm:
-                            <span style="color: orange;">
-                                Routine valve clinic referral
-                            </span>
-                            <br>
-                            <span style="color: grey;">
-                                <i>Please see Aortopathy section for referral urgency.</i>
-                            </span>
-                            <br><br>
-                            Bicuspid valve:
-                            <span style="color: orange;">
-                                Valve clinic referral
-                            </span>
-                            <br>
-                            <span style="color: grey;">
-                                <i>For referral urgency - please see Bicuspid Aortic Valve section.</i>
-                            </span>
-                        </div>
-                        <br>
-
-                        <b>Moderate aortic stenosis:</b>
-                        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            In all cases:
-                            <span style="color: orange;">
-                                Routine valve clinic referral
-                            </span>
-                        </div>
-                        <br>
-
-                        <b>Severe aortic stenosis:</b>
-                        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            In most cases:
-                            <span style="color: orange;">
-                                Routine valve clinic referral
-                            </span>
-                            <br><br>
-                            If any of the following features:
-                            <span style="color: red;">
-                                Urgent valve clinic referral
-                            </span>
-                            <br>
-                            <span style="margin-left: 0.5rem; color: grey;">
-                                - Symptoms (syncope, chest pain, breathlessness, paroxysmal nocturnal dyspnoea, oedema)
-                                <br>
-                                - New left ventricular systolic function (EF &lt;55%) with no other cause and/or reducing ejection fraction on subsequent scans
-                            </span>
-                        </div>
-                        <br>
-
-                        <b>Low-flow/Low-gradient aortic stenosis:</b>
-                        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            See Severe aortic stenosis (above)
-                            <br><br>
-                            <span style="color: grey;">
-                                <i>This describes a valve which has either Moderate or Severe aortic stenosis, but it is not possible to differentiate between grades on resting echo due to low stroke volume and resulting low flow rates across the valve. Further testing will be required to determine severity.</i>
-                            </span>
-                        </div>
-                    </div>
-                </details>
-
-                <!-- Aortic Regurgitation -->
-                <details style="margin: 10px 0 10px 10px; border: 1px solid #ccc; border-radius: 8px;">
-                    <summary style="padding: 12px 10px; cursor: pointer; font-size: 16px; font-weight: bold; background-color: #ededed; color: #1f1f1f;">
-                        Aortic Regurgitation
-                    </summary>
-                    <div style="padding: 10px 15px; margin-left: 20px;">
-                        <span style="color: grey;"><i>If valve intervention would not improve prognosis or quality of life (e.g. terminal illness, significant frailty etc) then referral for specialist care is not indicated.</i></span>
-                        <br><br>
-                        <b>Mild aortic regurgitation:</b>
-                        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            Trileaflet valve, non-dilated aorta:
-                            <span style="color: green;">
-                                Repeat echo in 5 years
-                            </span>
-                            <br>
-                            <span style="color: grey;">
-                                <i>No cardiology referral required.</i>
-                            </span>
-                            <br><br>
-                            Trileaflet valve, aorta &gt;40mm:
-                            <span style="color: orange;">
-                                Routine valve clinic referral
-                            </span>
-                            <br>
-                            <span style="color: grey;">
-                                <i>Please see Aortopathy section for referral urgency.</i>
-                            </span>
-                            <br><br>
-                            Bicuspid valve:
-                            <span style="color: orange;">
-                                Routine valve clinic referral
-                            </span>
-                            <br>
-                            <span style="color: grey;">
-                                <i>For referral urgency - please see Bicuspid Aortic Valve section.</i>
-                            </span>
-                        </div>
-                        <br>
-
-                        <b>Moderate aortic regurgitation:</b>
-                        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            In all cases:
-                            <span style="color: orange;">
-                                Routine valve clinic referral
-                            </span>
-                        </div>
-                        <br>
-
-                        <b>Severe aortic regurgitation:</b>
-                        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            In most cases:
-                            <span style="color: orange;">
-                                Routine valve clinic referral
-                            </span>
-                            <br><br>
-                            If any of the following features:
-                            <span style="color: red;">
-                                Urgent valve clinic referral
-                            </span>
-                            <br>
-                            <span style="margin-left: 0.5rem; color: grey;">
-                                - Symptoms (syncope, chest pain, breathlessness, paroxysmal nocturnal dyspnoea, oedema)
-                                <br>
-                                - Aortic root and/or proximal ascending aorta &gt;40mm (by absolute values)
-                                <br>
-                                - Dilated LV and/or reducing ejection fraction on subsequent scans
-                            </span>
-                        </div>
-                    </div>
-                </details>
-
-                <!-- Bicuspid Aortic Valve -->
-                <details style="margin: 10px 0 10px 10px; border: 1px solid #ccc; border-radius: 8px;">
-                    <summary style="padding: 12px 10px; cursor: pointer; font-size: 16px; font-weight: bold; background-color: #ededed; color: #1f1f1f;">
-                        Bicuspid Aortic Valve
-                    </summary>
-                    <div style="padding: 10px 15px; margin-left: 20px;">
-                        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            In most cases:
-                            <span style="color: orange;">
-                                Routine valve clinic referral
-                            </span>
-                            <br><br>
-                            If any of the following features:
-                            <span style="color: red;">
-                                Urgent valve clinic referral
-                            </span>
-                            <br>
-                            <span style="margin-left: 0.5rem; color: grey;">
-                                - Severe aortic stenosis or regurgitation
-                                <br>
-                                - Aortic root and/or proximal ascending aorta &gt;45mm (by absolute values)
-                            </span>
-                            <br><br>
-                            <span style="color: green;">
-                                <i>
-                                    Increased prevalence in 1st degree relatives - all immediate family members should be offered routine transthoracic echo for screening.
-                                </i>
-                            </span>
-                        </div>
-                    </div>
-                </details>
-
+        <div class="heading h2" onclick="toggle(this)">
+            <span class="arrow">▶</span>Aortic Valve
+        </div>           
+        <div class="content h2-content">            
+            <div class="heading h3" onclick="toggle(this)">
+                <span class="arrow">▶</span>Sclerotic Aortic Valve
             </div>
-        </details>
+            <div class="content h3-content">
+                <div class="block">
+                    <span style="color:grey">
+                        No routine follow-up
+                    <br><br>
+                    <i>This describes an aortic valve with thickened and/or slightly restricted leaflets, but without any significant restriction to blood flow.</i>
+                    </span>
+                </div>
+            </div>
 
-        <!-- MITRAL VALVE -->
-        <details style="margin: 10px 0; border: 1px solid #ccc; border-radius: 8px;">
-            <summary style="padding: 12px 10px; cursor: pointer; font-size: 20px; font-weight: bold; background-color: #f9f9f9;">
-                Mitral Valve
-            </summary>
-            <div style="padding: 2px 15px 4px 15px;">
+            <div class="heading h3" onclick="toggle(this)">
+                <span class="arrow">▶</span>Aortic Stenosis
+            </div>
+            <div class="content h3-content">
+                <span style="color:grey"><i>If valve intervention would not improve prognosis or quality of life (e.g. terminal illness, significant frailty etc) then referral for specialist care is not indicated.</i></span>
+                <br><br>
+                <b>Mild aortic stenosis:</b>
+                <div class="block">
+                    Trileaflet valve, non-dilated aorta:
+                    <span style="color:green">
+                        Repeat echo in 3 years
+                    </span>
+                    <br>
+                    <span style="color:grey">
+                        <i>No cardiology referral required.</i>
+                    </span>
+                    <br><br>
+                    Trileaflet valve, aorta &gt;40mm:
+                    <span style="color:orange">
+                        Routine valve clinic referral
+                    </span>
+                    <br>
+                    <span style="color:grey">
+                        <i>Please see Aortopathy section for referral urgency.</i>
+                    </span>
+                    <br><br>
+                    Bicuspid valve:
+                    <span style="color:orange">
+                        Valve clinic referral
+                    </span>
+                    <br>
+                    <span style="color:grey">
+                        <i>For referral urgency - please see Bicuspid Aortic Valve section.</i>
+                    </span>
+                </div>
+                <br>
 
-                <!-- Mitral Stenosis -->
-                <details style="margin: 10px 0 10px 10px; border: 1px solid #ccc; border-radius: 8px;">
-                    <summary style="padding: 12px 10px; cursor: pointer; font-size: 16px; font-weight: bold; background-color: #ededed; color: #1f1f1f;">
-                        Mitral Stenosis
-                    </summary>
-                    <div style="padding: 10px 15px; margin-left: 20px;">
-                        <span style="color: grey;"><i>If valve intervention would not improve prognosis or quality of life (e.g. terminal illness, significant frailty etc) then referral for specialist care is not indicated.</i></span>
-                        <br><br>
-                        <b>Mild mitral stenosis:</b>
-                        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            In all cases:
-                            <span style="color: green;">
-                                Repeat echo in 3 years
-                            </span>
+                <b>Moderate aortic stenosis:</b>
+                <div class="block">
+                    In all cases:
+                    <span style="color:orange">
+                        Routine valve clinic referral
+                    </span>
+                </div>
+                <br>
+
+                <b>Severe aortic stenosis:</b>
+                <div class="block">
+                    In most cases:
+                    <span style="color:orange">
+                        Routine valve clinic referral
+                    </span>
+                    <br><br>
+                    If any of the following features:
+                    <span style="color:red">
+                            Urgent valve clinic referral
+                    </span>    
+                    <br>
+                    <div class="indent">
+                        <span style="color:grey">
+                            - Symptoms (syncope, chest pain, breathlessness, paroxysmal nocturnal dyspnoea, oedema)
                             <br>
-                            <span style="color: grey;">
-                                <i>No cardiology referral required.</i>
-                            </span>
-                        </div>
-                        <br>
-
-                        <b>Moderate mitral stenosis:</b>
-                        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            In all cases:
-                            <span style="color: orange;">
-                                Routine valve clinic referral
-                            </span>
-                            <br>
-                            <span style="color: grey;">
-                                <i>If new onset atrial fibrillation – please consider commencing Vitamin K Antagonist instead of DOAC (if no contraindications).</i>
-                            </span>
-                        </div>
-                        <br>
-
-                        <b>Severe mitral stenosis:</b>
-                        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            In all cases:
-                            <span style="color: red;">
-                                Urgent valve clinic referral
-                            </span>
-                            <br>
-                            <span style="color: grey;">
-                                <i>If new onset atrial fibrillation – please consider commencing Vitamin K Antagonist instead of DOAC (if no contraindications).</i>
-                            </span>
-                        </div>
+                            - New left ventricular systolic function (EF &lt;55%) with no other cause and/or reducing ejection fraction on subsequent scans
+                        </span>
                     </div>
-                </details>
+                </div>
+                <br>
 
-                <!-- Mitral Regurgitation -->
-                <details style="margin: 10px 0 10px 10px; border: 1px solid #ccc; border-radius: 8px;">
-                    <summary style="padding: 12px 10px; cursor: pointer; font-size: 16px; font-weight: bold; background-color: #ededed; color: #1f1f1f;">
-                        Mitral Regurgitation
-                    </summary>
-                    <div style="padding: 10px 15px; margin-left: 20px;">
-                        <span style="color: grey;"><i>If valve intervention would not improve prognosis or quality of life (e.g. terminal illness, significant frailty etc) then referral for specialist care is not indicated.</i></span>
+                <b>Low-flow/Low-gradient aortic stenosis:</b>
+                <div class="block">
+                    See Severe aortic stenosis (above)
+                    <br><br>
+                    <span style="color:grey">
+                        <i>This describes a valve which has either Moderate or Severe aortic stenosis, but it is not possible to differentiate between grades on resting echo due to low stroke volume and resulting low flow rates across the valve. Further testing will be required to determine severity.</i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="heading h3" onclick="toggle(this)">
+            <span class="arrow">▶</span>Aortic Regurgitation
+            </div>
+            <div class="content h3-content">
+                <span style="color:grey"><i>If valve intervention would not improve prognosis or quality of life (e.g. terminal illness, significant frailty etc) then referral for specialist care is not indicated.</i></span>
+                <br><br>
+                <b>Mild aortic regurgitation:</b>
+                <div class="block">
+                    Trileaflet valve, non-dilated aorta:
+                    <span style="color:green">
+                        Repeat echo in 5 years
+                    </span>
+                    <br>
+                    <span style="color:grey">
+                        <i>No cardiology referral required.</i>
+                    </span>
+                    <br><br>
+                    Trileaflet valve, aorta &gt;40mm:
+                    <span style="color:orange">
+                        Routine valve clinic referral
+                    </span>
+                    <br>
+                    <span style="color:grey">
+                        <i>Please see Aortopathy section for referral urgency.</i>
+                    </span>
+                    <br><br>
+                    Bicuspid valve:
+                    <span style="color:orange">
+                        Routine valve clinic referral
+                    </span>
+                    <br>
+                    <span style="color:grey">
+                        <i>For referral urgency - please see Bicuspid Aortic Valve section.</i>
+                    </span>
+                </div>
+                <br>
+
+                <b>Moderate aortic regurgitation:</b>
+                <div class="block">
+                    In all cases:
+                    <span style="color:orange">
+                        Routine valve clinic referral
+                    </span>
+                </div>
+                <br>
+
+                <b>Severe aortic regurgitation:</b>
+                <div class="block">
+                    In most cases:
+                    <span style="color:orange">
+                        Routine valve clinic referral
+                    </span>
+                    <br><br>
+                    If any of the following features:
+                    <span style="color:red">
+                            Urgent valve clinic referral
+                    </span>    
+                    <br>
+                    <div class="indent">
+                        <span style="color:grey">
+                            - Symptoms (syncope, chest pain, breathlessness, paroxysmal nocturnal dyspnoea, oedema)
+                            <br>
+                            - Aortic root and/or proximal ascending aorta &gt;40mm (by absolute values)
+                            <br>
+                            - Dilated LV and/or reducing ejection fraction on subsequent scans
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="heading h3" onclick="toggle(this)">
+                <span class="arrow">▶</span>Bicuspid Aortic Valve
+            </div>
+            <div class="content h3-content">
+                <div class="block">
+                    In most cases:
+                    <span style="color:orange">
+                        Routine valve clinic referral
+                    </span>
+                    <br><br>
+                    If any of the following features:
+                    <span style="color:red">
+                            Urgent valve clinic referral
+                    </span>    
+                    <br>
+                    <div class="indent">
+                        <span style="color:grey">
+                            - Severe aortic stenosis or regurgitation
+                            <br>
+                            - Aortic root and/or proximal ascending aorta &gt;45mm (by absolute values)
+                        </span>
+                    </div>
+                    <br>
+                    <span style="color:green">
+                        <i>
+                            Increased prevalence in 1st degree relatives - all immediate family members should be offered routine transthoracic echo for screening.
+                        </i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+            <div class="heading h2" onclick="toggle(this)">
+                <span class="arrow">▶</span>Mitral Valve
+            </div>
+            <div class="content h2-content">
+                
+                <div class="heading h3" onclick="toggle(this)">
+                    <span class="arrow">▶</span>Mitral Stenosis
+                </div>
+                <div class="content h3-content">
+                    <span style="color:grey"><i>If valve intervention would not improve prognosis or quality of life (e.g. terminal illness, significant frailty etc) then referral for specialist care is not indicated.</i></span>
+                    <br><br>
+                    <b>Mild mitral stenosis:</b>
+                    <div class="block">
+                        In all cases:
+                        <span style="color:green">
+                            Repeat echo in 3 years
+                        </span>
+                        <br>
+                        <span style="color:grey">
+                            <i>No cardiology referral required.</i>
+                        </span>
+                    </div>
+                    <br>
+                    <b>Moderate mitral stenosis:</b>
+                    <div class="block">
+                        In all cases:
+                        <span style="color:orange">
+                            Routine valve clinic referral
+                        </span>
+                        <br>
+                        <span style="color:grey">
+                            <i>If new onset atrial fibrillation – please consider commencing Vitamin K Antagonist instead of DOAC (if no contraindications).</i>
+                        </span>
+                    </div>
+                    <br>
+
+                    <b>Severe mitral stenosis:</b>
+                    <div class="block">
+                        In all cases:
+                        <span style="color:red">
+                            Urgent valve clinic referral
+                        </span>
+                        <br>
+                        <span style="color:grey">
+                            <i>If new onset atrial fibrillation – please consider commencing Vitamin K Antagonist instead of DOAC (if no contraindications).</i>
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="heading h3" onclick="toggle(this)">
+                    <span class="arrow">▶</span>Mitral Regurgitation
+                </div>
+                <div class="content h3-content">
+                    <span style="color:grey"><i>If valve intervention would not improve prognosis or quality of life (e.g. terminal illness, significant frailty etc) then referral for specialist care is not indicated.</i></span>
+                    <br><br>
+                    <b>Mild mitral regurgitation:</b>
+                    <div class="block">
+                        In most cases:
+                        <span style="color:grey">
+                            No routine follow-up
+                        </span>
                         <br><br>
-                        <b>Mild mitral regurgitation:</b>
-                        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            In most cases:
-                            <span style="color: grey;">
-                                No routine follow-up
-                            </span>
-                            <br><br>
-                            Rheumatic valve/post-inflammatory process:
-                            <span style="color: green;">
-                                Repeat echo in 3 years
-                            </span>
-                            <br><br>
-                            Other anatomical abnormality:
-                            <span style="color: orange;">
-                                Routine valve clinic referral
-                            </span>
-                            <br>
-                            <span style="color: grey;">
-                                <i>(i.e. Mitral annular disjunction, mitral valve prolapse, carcinoid)</i>
-                            </span>
-                        </div>
+                        Rheumatic valve/post-inflammatory process:
+                        <span style="color:green">
+                            Repeat echo in 3 years
+                        </span>
+                        <br><br>
+                        Other anatomical abnormality:
+                        <span style="color:orange">
+                            Routine valve clinic referral
+                        </span>
                         <br>
+                        <span style="color:grey">
+                            <i>(i.e. Mitral annular disjunction, mitral valve prolapse, carcinoid)</i>
+                        </span>
+                    </div>
+                    <br>
 
-                        <b>Moderate mitral regurgitation:</b>
-                        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            In all cases:
-                            <span style="color: orange;">
-                                Routine valve clinic referral
-                            </span>
-                        </div>
-                        <br>
+                    <b>Moderate mitral regurgitation:</b>
+                    <div class="block">
+                        In all cases:
+                        <span style="color:orange">
+                            Routine valve clinic referral
+                        </span>
+                    </div>
+                    <br>
 
-                        <b>Severe mitral regurgitation:</b>
-                        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            In most cases:
-                            <span style="color: orange;">
-                                Routine valve clinic referral
-                            </span>
-                            <br><br>
-                            If any of the following features:
-                            <span style="color: red;">
+                    <b>Severe mitral regurgitation:</b>
+                    <div class="block">
+                        In most cases:
+                        <span style="color:orange">
+                            Routine valve clinic referral
+                        </span>
+                        <br><br>
+                        If any of the following features:
+                        <span style="color:red">
                                 Urgent valve clinic referral
-                            </span>
-                            <br>
-                            <span style="margin-left: 0.5rem; color: grey;">
+                        </span>    
+                        <br>
+                        <div class="indent">
+                            <span style="color:grey">
                                 - Symptoms (syncope, chest pain, breathlessness, paroxysmal nocturnal dyspnoea, oedema)
                                 <br>
                                 - New atrial fibrillation
@@ -804,164 +878,146 @@
                                 <br>
                                 - Estimated pulmonary artery systolic pressure &gt;50mmHg and/or right ventricular impairment
                                 <br>
-                                - Indexed LA volume &gt;60ml/m² (by BSA)
+                                - Indexed LA volume &gt;60ml/m2 (by BSA)
                             </span>
                         </div>
                     </div>
-                </details>
-
-                <!-- Mitral Annular Disjunction -->
-                <details style="margin: 10px 0 10px 10px; border: 1px solid #ccc; border-radius: 8px;">
-                    <summary style="padding: 12px 10px; cursor: pointer; font-size: 16px; font-weight: bold; background-color: #ededed; color: #1f1f1f;">
-                        Mitral Annular Disjunction
-                    </summary>
-                    <div style="padding: 10px 15px; margin-left: 20px;">
-                        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            <span style="color: grey;">
+                </div>
+                
+                <div class="heading h3" onclick="toggle(this)">
+                    <span class="arrow">▶</span>Mitral Annular Dysjunction
+                </div>
+                    <div class="content h3-content">
+                        <div class="block">
+                            <span style="color:grey">
                                 <i>
-                                    This describes an abnormality of the mitral annulus which can result in arrhythmia.
-                                    <br>
+                                    This describes an abnormality of the mitral annulus which can result in arrythmia. 
+                                <br>
                                     It is associated with mitral valve prolapse and mitral regurgitation.
-                                    <br><br>
-                                    In all cases cardiology review is required.
-                                    <br><br>
+                                <br><br>
+                                    In all cases cardiology review is required. 
+                                <br><br>
                                     Please see Mitral Regurgitation section for referral urgency.
                                 </i>
                             </span>
                         </div>
                     </div>
-                </details>
-
             </div>
-        </details>
-
-        <!-- TRICUSPID VALVE -->
-        <details style="margin: 10px 0; border: 1px solid #ccc; border-radius: 8px;">
-            <summary style="padding: 12px 10px; cursor: pointer; font-size: 20px; font-weight: bold; background-color: #f9f9f9;">
-                Tricuspid Valve
-            </summary>
-            <div style="padding: 2px 15px 4px 15px;">
-
-                <!-- Tricuspid Stenosis -->
-                <details style="margin: 10px 0 10px 10px; border: 1px solid #ccc; border-radius: 8px;">
-                    <summary style="padding: 12px 10px; cursor: pointer; font-size: 16px; font-weight: bold; background-color: #ededed; color: #1f1f1f;">
-                        Tricuspid Stenosis
-                    </summary>
-                    <div style="padding: 10px 15px; margin-left: 20px;">
-                        <span style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            <span style="color: grey;">
-                                <i>Vanishingly rare!</i>
-                            </span>
-                            <br><br>
-                            In all cases:
-                            <br>
-                            <span style="color: orange;">
-                                Routine valve clinic referral
-                            </span>
+            
+            <div class="heading h2" onclick="toggle(this)">
+                <span class="arrow">▶</span>Tricuspid Valve
+            </div>
+            <div class="content h2-content">
+                <div class="heading h3" onclick="toggle(this)">
+                    <span class="arrow">▶</span>Tricuspid Stenosis
+                </div>
+                <div class="content h3-content">
+                    <span class="block">
+                        <span style="color:grey">
+                            <i>Vanishingly rare!</i>
+                        </span>
+                        <br><br>
+                        In all cases:
+                        <br>
+                        <span style="color:orange">
+                            Routine valve clinic referral
+                        </span>
+                    </span>
+                </div>
+                
+                <div class="heading h3" onclick="toggle(this)">
+                    <span class="arrow">▶</span>Tricuspid Regurgitation
+                </div>
+                <div class="content h3-content">
+                    <span style="color:grey"><i>If valve intervention would not improve prognosis or quality of life (e.g. terminal illness, significant frailty etc) then referral for specialist care is not indicated.</i></span>
+                    <br><br>
+                    <b>Mild tricuspid regurgitation:</b>
+                    <div class="block">
+                        In most cases:
+                        <span style="color:grey">
+                            No routine follow-up
+                        </span>
+                        <br><br>
+                        Anatomical abnormality:
+                        <span style="color:orange">
+                            Routine valve clinic referral
+                        </span>
+                        <br>
+                        <span style="color:grey">
+                            <i>(i.e. Tricuspid valve prolapse, carcinoid, previous vegetation)</i>
                         </span>
                     </div>
-                </details>
+                    <br>
 
-                <!-- Tricuspid Regurgitation -->
-                <details style="margin: 10px 0 10px 10px; border: 1px solid #ccc; border-radius: 8px;">
-                    <summary style="padding: 12px 10px; cursor: pointer; font-size: 16px; font-weight: bold; background-color: #ededed; color: #1f1f1f;">
-                        Tricuspid Regurgitation
-                    </summary>
-                    <div style="padding: 10px 15px; margin-left: 20px;">
-                        <span style="color: grey;"><i>If valve intervention would not improve prognosis or quality of life (e.g. terminal illness, significant frailty etc) then referral for specialist care is not indicated.</i></span>
+                    <b>Moderate tricuspid regurgitation:</b>
+                    <div class="block">
+                        In most cases:
+                        <span style="color:grey">
+                            No routine follow-up
+                        </span>
                         <br><br>
-                        <b>Mild tricuspid regurgitation:</b>
-                        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            In most cases:
-                            <span style="color: grey;">
-                                No routine follow-up
-                            </span>
-                            <br><br>
-                            Anatomical abnormality:
-                            <span style="color: orange;">
-                                Routine valve clinic referral
-                            </span>
-                            <br>
-                            <span style="color: grey;">
-                                <i>(i.e. Tricuspid valve prolapse, carcinoid, previous vegetation)</i>
-                            </span>
-                        </div>
+                        Anatomical abnormality:
+                        <span style="color:orange">
+                            Routine valve clinic referral
+                        </span>
                         <br>
+                        <span style="color:grey">
+                            <i>(i.e. Tricuspid valve prolapse, carcinoid, previous vegetation, pacing lead)</i>
+                        </span>
+                    </div>
+                    <br>
 
-                        <b>Moderate tricuspid regurgitation:</b>
-                        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            In most cases:
-                            <span style="color: grey;">
-                                No routine follow-up
-                            </span>
-                            <br><br>
-                            Anatomical abnormality:
-                            <span style="color: orange;">
-                                Routine valve clinic referral
-                            </span>
-                            <br>
-                            <span style="color: grey;">
-                                <i>(i.e. Tricuspid valve prolapse, carcinoid, previous vegetation, pacing lead)</i>
-                            </span>
-                        </div>
-                        <br>
-
-                        <b>Severe tricuspid regurgitation:</b>
-                        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            In most cases:
-                            <span style="color: orange;">
-                                Routine valve clinic referral
-                            </span>
-                            <br><br>
-                            If any of the following features:
-                            <span style="color: red;">
+                    <b>Severe tricuspid regurgitation:</b>
+                    <div class="block">
+                        In most cases:
+                        <span style="color:orange">
+                            Routine valve clinic referral
+                        </span>
+                        <br><br>
+                        If any of the following features:
+                        <span style="color:red">
                                 Urgent valve clinic referral
-                            </span>
-                            <br>
-                            <span style="margin-left: 0.5rem; color: grey;">
+                        </span>    
+                        <br>
+                        <div class="indent">
+                            <span style="color:grey">
                                 - Symptoms (syncope, chest pain, breathlessness, paroxysmal nocturnal dyspnoea, oedema)
                                 <br>
                                 - Estimated pulmonary artery systolic pressure &gt;50mmHg and/or right ventricular impairment
                             </span>
                         </div>
                     </div>
-                </details>
-
+                </div>
             </div>
-        </details>
-
-        <!-- PULMONARY VALVE -->
-        <details style="margin: 10px 0; border: 1px solid #ccc; border-radius: 8px;">
-            <summary style="padding: 12px 10px; cursor: pointer; font-size: 20px; font-weight: bold; background-color: #f9f9f9;">
-                Pulmonary Valve
-            </summary>
-            <div style="padding: 2px 15px 4px 15px;">
-
-                <!-- Pulmonary Stenosis -->
-                <details style="margin: 10px 0 10px 10px; border: 1px solid #ccc; border-radius: 8px;">
-                    <summary style="padding: 12px 10px; cursor: pointer; font-size: 16px; font-weight: bold; background-color: #ededed; color: #1f1f1f;">
-                        Pulmonary Stenosis
-                    </summary>
-                    <div style="padding: 10px 15px; margin-left: 20px;">
-                        <span style="color: grey;"><i>If valve intervention would not improve prognosis or quality of life (e.g. terminal illness, significant frailty etc) then referral for specialist care is not indicated.</i></span>
+            
+            <div class="heading h2" onclick="toggle(this)">
+                <span class="arrow">▶</span>Pulmonary Valve
+            </div>
+            <div class="content h2-content">
+                <div class="heading h3" onclick="toggle(this)">
+                    <span class="arrow">▶</span>Pulmonary Stenosis
+                </div>
+                <div class="content h3-content">
+                    <span style="color:grey"><i>If valve intervention would not improve prognosis or quality of life (e.g. terminal illness, significant frailty etc) then referral for specialist care is not indicated.</i></span>
+                    <br><br>
+                    <div class="block">
+                        <span style="color:grey">
+                            <i>Generally due to known congenital abnormality - followed up by the Adult Congenital Heart Disease (ACHD) service.</i>
+                        </span>
                         <br><br>
-                        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            <span style="color: grey;">
-                                <i>Generally due to known congenital abnormality - followed up by the Adult Congenital Heart Disease (ACHD) service.</i>
-                            </span>
-                            <br><br>
-                            In most cases:
-                            <br>
-                            <span style="color: orange;">
-                                Routine Adult Congenital Heart Disease (ACHD) referral
-                            </span>
-                            <br><br>
-                            If severe stenosis and any of the following features:
-                            <span style="color: red;">
+                        In most cases:
+                        <br>
+                        <span style="color:orange">
+                            Routine Adult Congenital Heart Disease (ACHD) referral
+                        </span>
+                        <br><br>
+                        If severe stenosis and any of the following features:
+                        <span style="color:red">
                                 Urgent ACHD referral
-                            </span>
-                            <br>
-                            <span style="margin-left: 0.5rem; color: grey;">
+                        </span>    
+                        <br>
+                        <div class="indent">
+                            <span style="color:grey">
                                 - Symptoms (syncope, chest pain, breathlessness, paroxysmal nocturnal dyspnoea, oedema)
                                 <br>
                                 - Dilated and/or impaired right ventricle
@@ -970,64 +1026,63 @@
                             </span>
                         </div>
                     </div>
-                </details>
-
-                <!-- Pulmonary Regurgitation -->
-                <details style="margin: 10px 0 10px 10px; border: 1px solid #ccc; border-radius: 8px;">
-                    <summary style="padding: 12px 10px; cursor: pointer; font-size: 16px; font-weight: bold; background-color: #ededed; color: #1f1f1f;">
-                        Pulmonary Regurgitation
-                    </summary>
-                    <div style="padding: 10px 15px; margin-left: 20px;">
-                        <span style="color: grey;"><i>If valve intervention would not improve prognosis or quality of life (e.g. terminal illness, significant frailty etc) then referral for specialist care is not indicated.</i></span>
+                </div>
+                
+                <div class="heading h3" onclick="toggle(this)">
+                    <span class="arrow">▶</span>Pulmonary Regurgitation
+                </div>
+                <div class="content h3-content">
+                    <span style="color:grey"><i>If valve intervention would not improve prognosis or quality of life (e.g. terminal illness, significant frailty etc) then referral for specialist care is not indicated.</i></span>
+                    <br><br>
+                    <b>Mild pulmonary regurgitation:</b>
+                    <div class="block">
+                        In most cases:
+                        <span style="color:grey">
+                            No routine follow-up
                         <br><br>
-                        <b>Mild pulmonary regurgitation:</b>
-                        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            In most cases:
-                            <span style="color: grey;">
-                                No routine follow-up
-                            </span>
-                            <br><br>
-                            But, in rare cases of anatomical abnormality:
-                            <span style="color: orange;">
-                                Routine valve clinic referral
-                            </span>
-                            <br>
-                            <span style="color: grey;">
-                                <i>(i.e. Carcinoid, previous vegetation, previous valvuloplasty, pulmonary artery dilatation)</i>
-                            </span>
-                        </div>
+                        But, in rare cases of anatomical abnormality:
+                        </span>
+                        <span style="color:orange">
+                            Routine valve clinic referral
+                        </span>
                         <br>
+                        <span style="color:grey">
+                            <i>(i.e. Carcinoid, previous vegetation, previous valvuloplasty, pulmonary artery dilatation)</i>
+                        </span>
+                    </div>
+                    <br>
 
-                        <b>Moderate pulmonary regurgitation:</b>
-                        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            <span style="color: grey;">
-                                <i>Generally due to known congenital abnormality - followed up by the Adult Congenital Heart Disease (ACHD) service.</i>
-                            </span>
-                            <br><br>
-                            In all cases:
-                            <span style="color: orange;">
-                                Routine Adult Congenital Heart Disease (ACHD) referral
-                            </span>
-                        </div>
-                        <br>
+                    <b>Moderate pulmonary regurgitation:</b>
+                    <div class="block">
+                        <span style="color:grey">
+                            <i>Generally due to known congenital abnormality - followed up by the Adult Congenital Heart Disease (ACHD) service.</i>
+                        </span>
+                        <br><br>
+                        In all cases:
+                        <span style="color:orange">
+                            Routine Adult Congenital Heart Disease (ACHD) referral
+                        </span>
+                    </div>
+                    <br>
 
-                        <b>Severe pulmonary regurgitation:</b>
-                        <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                            <span style="color: grey;">
-                                <i>Generally due to known congenital abnormality - followed up by the Adult Congenital Heart Disease (ACHD) service.</i>
-                            </span>
-                            <br><br>
-                            In most cases:
-                            <span style="color: orange;">
-                                Routine Adult Congenital Heart Disease (ACHD) referral
-                            </span>
-                            <br><br>
-                            If any of the following features:
-                            <span style="color: red;">
+                    <b>Severe pulmonary regurgitation:</b>
+                    <div class="block">
+                        <span style="color:grey">
+                            <i>Generally due to known congenital abnormality - followed up by the Adult Congenital Heart Disease (ACHD) service.</i>
+                        </span>
+                        <br><br>
+                        In most cases:
+                        <span style="color:orange">
+                            Routine Adult Congenital Heart Disease (ACHD) referral
+                        </span>
+                        <br><br>
+                        If any of the following features:
+                        <span style="color:red">
                                 Urgent ACHD referral
-                            </span>
-                            <br>
-                            <span style="margin-left: 0.5rem; color: grey;">
+                        </span>    
+                        <br>
+                        <div class="indent">
+                            <span style="color:grey">
                                 - Symptoms (syncope, chest pain, breathlessness, paroxysmal nocturnal dyspnoea, oedema)
                                 <br>
                                 - Dilated and/or impaired right ventricle
@@ -1036,55 +1091,51 @@
                             </span>
                         </div>
                     </div>
-                </details>
-
+                </div>
             </div>
-        </details>
-
-        <!-- REPAIRED OR REPLACED VALVES -->
-        <details style="margin: 10px 0; border: 1px solid #ccc; border-radius: 8px;">
-            <summary style="padding: 12px 10px; cursor: pointer; font-size: 20px; font-weight: bold; background-color: #f9f9f9;">
-                Repaired or Replaced Valves
-            </summary>
-            <div style="padding: 2px 15px 4px 15px;">
+        
+            <div class="heading h2" onclick="toggle(this)">
+                <span class="arrow">▶</span>Repaired or Replaced Valves
+            </div>
+            <div class="content h2-content">
                 <b>Mechanical Valve Replacements</b>
-                <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                    <span style="color: grey;"><i>
-                        Including:
+                <div class="block">
+                    <span style="color:grey"><i>
+                    Including:
                         <br>- Mechanical aortic valve replacement (mAVR)
                         <br>- Mechanical mitral valve replacement (mMVR)
-                        <br>- Mechanical tricuspid valve replacement (mTVR)
+                        <br>- Mechanical tricupid valve replacement (mTVR)
                     </i></span>
                     <br><br>
                     In nearly all cases:
-                    <span style="color: grey;">
+                    <span style="color:grey">
                         No routine imaging surveillance required
-                        <br><br>
-                        <i>Only if there is significant clinical change, or incidental finding of valve dysfunction on other imaging would direct cardiology input be required.</i>
+                    <br><br>
+                    <i>Only if there is significant clinical change, or incidental finding of valve disfunction on other imaging would direct cardiology input be required.</i>
                     </span>
                 </div>
                 <br>
 
                 <b>Tissue Valve Replacements</b>
-                <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                    <span style="color: grey;"><i>
+                <div class="block">
+                    <span style="color:grey"><i>
                         Including:
                         <br>- Tissue aortic valve replacement (bioAVR, TAVI)
                         <br>- Tissue mitral valve replacement (bioMVR)
-                        <br>- Tissue tricuspid valve replacement (bioTVR)
+                        <br>- Tissue tricupid valve replacement (bioTVR)
                         <br>- Tissue pulmonary valve replacement (PPVI, Melody)
                     </i></span>
-                    <br><br>
+                        <br><br>
                     In all cases:
-                    <span style="color: orange;">
+                    <span style="color:orange">
                         Lifelong cardiologist-led follow-up
                     </span>
                 </div>
                 <br>
-
+                
                 <b>Surgical Valve Repairs</b>
-                <div style="padding: 6px; display: block; background-color: #ededed; border-radius: 4px; margin: 6px;">
-                    <span style="color: grey;"><i>
+                <div class="block">
+                    <span style="color:grey"><i>
                         Including:
                         <br>- Aortic valve repair (Ozaki)
                         <br>- Mitral valve repair (including Mitral TEER)
@@ -1093,15 +1144,32 @@
                     </i></span>
                     <br><br>
                     In all cases:
-                    <span style="color: orange;">
+                    <span style="color:orange">
                         Lifelong cardiologist-led follow-up
                     </span>
                 </div>
+                <br>
+                
             </div>
-        </details>
-
+        </div>
+    <div style="height: 20px">
     </div>
-</details>
+        
 
-<div style="height: 20px;"></div>
+    <script>
+    function toggle(element) {
+            const content = element.nextElementSibling;
+            
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                element.classList.remove('active');
+            } else {
+                content.style.display = 'block';
+                element.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
+
 
